@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/idQuestionTextViewMA"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:gravity="center"
+        android:text="@string/question_1"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/question_text_size"
+
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBtwQuesAndTrueBtnMA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <View
+        android:id="@+id/idDividerHorizontalBtwQuesAndTrueBtnMA"
+        android:layout_width="0dp"
+        android:layout_height="0.1dp"
+
+        app:layout_constraintBottom_toTopOf="@id/idTrueBtnMA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idQuestionTextViewMA"
+
+        />
+
+
+    <Button
+        android:id="@+id/idTrueBtnMA"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:background="@color/colorTrueButton"
+        android:text="@string/true_button"
+
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBtwTrueBtnAndScoreMA"
+        app:layout_constraintEnd_toStartOf="@id/idFalseBtnMA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBtwQuesAndTrueBtnMA"
+
+        />
+
+    <Button
+        android:id="@+id/idFalseBtnMA"
+        style="@style/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="64dp"
+        android:background="@color/colorFalseButton"
+
+        android:text="@string/false_button"
+
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBtwTrueBtnAndScoreMA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idTrueBtnMA"
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBtwQuesAndTrueBtnMA" />
+
+    <View
+        android:id="@+id/idDividerHorizontalBtwTrueBtnAndScoreMA"
+        android:layout_width="0dp"
+        android:layout_height="0.1dp"
+        android:layout_marginBottom="64dp"
+
+        app:layout_constraintBottom_toTopOf="@id/idScoreTextViewMA"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idTrueBtnMA" />
+
+
+    <TextView
+        android:id="@+id/idScoreTextViewMA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/initial_score"
+
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/question_text_size"
+        app:layout_constraintBottom_toTopOf="@id/idProgressBarMA"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBtwTrueBtnAndScoreMA"
+
+        />
+
+    <ProgressBar
+        android:id="@+id/idProgressBarMA"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/height_progress_bar"
+        android:layout_marginTop="8dp"
+
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idScoreTextViewMA"
+
+        />
+
+</android.support.constraint.ConstraintLayout>
